@@ -14,6 +14,7 @@ MVC Rent ERP
 3.สร้างฐานข้อมูลใน MySQL และนำเข้าไฟล์ database.sql (ถ้ามี)
 4.ตั้งค่าการเชื่อมต่อฐานข้อมูลในไฟล์ config/database.php
 5.เปิดใช้งาน XAMPP และเข้าถึงระบบผ่าน http://localhost/mvc-rent-erp
+6.หรือทดสอบระบบได้ที่ http://mvc-rent-erp.gohdik.dev
 
 *วิธีการใช้งาน (Usage)
 1.เข้าสู่ระบบด้วยบัญชีผู้ใช้ที่ลงทะเบียน
