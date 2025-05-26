@@ -6,7 +6,7 @@ MVC Rent ERP
 2.จัดการรายการทรัพย์สิน/สินทรัพย์ให้เช่า (Asset Management)
 3.ระบบจองรถและจัดการสัญญาเช่า (Rental & Contract Management)
 4.ระบบแจ้งเตือนการชำระเงินและสถานะการเช่า (Payment & Notification)
-5.รายงานสรุปและสถิติ (Reporting & Dashboard)
+5.รายงานสรุปและสถิติ (Reporting & Dashboard)****
 
 *วิธีการติดตั้ง (Installation)
 1.ดาวน์โหลดหรือโคลนโปรเจกต์นี้
