@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>ระบบจัดการเช่ารถ</title>
- 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -41,26 +41,7 @@
               <a class="text-[#0c1c17] text-sm font-medium leading-normal" href="report">รายงาน</a>
             </div>
             <div class="flex gap-2">
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e6f4ef] text-[#0c1c17] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#0c1c17]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e6f4ef] text-[#0c1c17] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#0c1c17]" data-icon="Plus" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
-                  </svg>
-                </div>
-              </button>
+
             </div>
             <div
               class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
