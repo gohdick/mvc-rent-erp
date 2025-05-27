@@ -39,5 +39,66 @@ class Cars {
         $stmt->execute();
         return $stmt;
     }
-    
+
+    public function selectById($id) {
+        $query = "SELECT * FROM " . $this->table . " WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        return $stmt;
+    }
+
+    public function insert($data) {
+        $query = "INSERT INTO " . $this->table . " (license_plate, brand, model, color, year, seats, status, image_url, note) VALUES (:license_plate, :brand, :model, :color, :year, :seats, :status, :image_url, :note)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':license_plate', $data['license_plate']);
+        $stmt->bindParam(':brand', $data['brand']);
+        $stmt->bindParam(':model', $data['model']);
+        $stmt->bindParam(':color', $data['color']);
+        $stmt->bindParam(':year', $data['year']);
+        $stmt->bindParam(':seats', $data['seats']);
+        $stmt->bindParam(':status', $data['status']);
+        $stmt->bindParam(':image_url', $data['image_url']);
+        $stmt->bindParam(':note', $data['note']);
+        $stmt->execute();
+        return $stmt;
+    }
+
+    public function update($data) {
+        $query = "UPDATE " . $this->table . " SET license_plate = :license_plate, brand = :brand, model = :model, color = :color, year = :year, seats = :seats, status = :status, image_url = :image_url, note = :note WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $data['id']);
+        $stmt->bindParam(':license_plate', $data['license_plate']);
+        $stmt->bindParam(':brand', $data['brand']);
+        $stmt->bindParam(':model', $data['model']);
+        $stmt->bindParam(':color', $data['color']);
+        $stmt->bindParam(':year', $data['year']);
+        $stmt->bindParam(':seats', $data['seats']);
+        $stmt->bindParam(':status', $data['status']);
+        $stmt->bindParam(':image_url', $data['image_url']);
+        $stmt->bindParam(':note', $data['note']);
+        $stmt->execute();
+        return $stmt;
+    }
+
+    public function delete($id) {
+        $query = "DELETE FROM " . $this->table . " WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        return $stmt;
+    }
+
+    public function search($keyword) {
+        $query = "SELECT * FROM " . $this->table . 
+                " WHERE license_plate LIKE :keyword " .
+                " OR brand LIKE :keyword " .
+                " OR model LIKE :keyword";
+        
+        $keyword = "%{$keyword}%";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':keyword', $keyword);
+        $stmt->execute();
+        return $stmt;
+    }
 }

@@ -1,5 +1,41 @@
 <?php
 // Simple MVC Routing
+// สำหรับ AJAX request
+if (isset($_GET['action'])) {
+    $controllerName = 'CarController';
+    $action = $_GET['action'];
+    require_once 'controller/' . $controllerName . '.php';
+    $controller = new $controllerName();
+
+    if ($action === 'updateCar') {
+        $controller->updateCar();
+        exit;
+    }
+
+    if ($action === 'deleteCar') {
+        $controller->deleteCar();
+        exit;
+    }
+
+    if ($action === 'searchCars') {
+        $controller->searchCars();
+        exit;
+    }
+
+    if ($action === 'addCar') {
+        $controller->addCar();
+        exit;
+    }
+
+    if ($action === 'getCar') {
+        $controller->getCar();
+        exit;
+    }
+
+    $controller->$action();
+    exit;
+}
+
 $url = isset($_GET['url']) ? $_GET['url'] : 'dashboard';
 $urlParts = explode('/', $url);
 
