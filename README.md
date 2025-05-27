@@ -33,5 +33,13 @@ email: thirasaksimthog@gmail.com
 phone: 089-916-2146
 ******************
 
-ตัวอย่างระบบ
-![alt text](image.png)
+## ตัวอย่างระบบ (System Preview)
+
+### หน้าจัดการรถ (Car Management)
+![car management](assets/image/ex_car1.png)
+
+<!-- ### หน้าจัดการผู้เช่า (Customer Management)
+![customer management](assets/image/ex_customer1.png)
+
+### หน้าจัดการสัญญา (Contract Management)
+![contract management](assets/image/ex_contract1.png) -->
